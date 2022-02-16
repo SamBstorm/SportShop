@@ -1,0 +1,35 @@
+﻿@model ProductDetails
+@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+<div>
+    <div>
+        <img src="~/assets/ProductPics/@Model.PicsUrl" />
+    </div>
+    <div>
+        @*<h4>@Model.ProductName - @Model.Color - @Model.Model</h4>*@
+        <h4>@($"{Model.ProductName} - {Model.Color} - {Model.Model}")</h4>
+        <h5>vendu par @Model.SellerName</h5>
+        <p>@Model.ProductDescription</p>
+        <strong>@Model.Price €</strong>
+        <dl>
+            <dt>
+                Volume
+            </dt>
+            <dd>
+                @Model.Volume m³ 
+            </dd>
+            <dt>
+                Poids
+            </dt>
+            <dd>
+                @Model.Weigth gr.
+            </dd>
+        </dl>
+    </div>
+</div>
+<div>
+    @Html.ActionLink("Retourner à la liste","Index","Shop")    
+</div>

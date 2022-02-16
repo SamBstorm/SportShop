@@ -1,0 +1,33 @@
+﻿@model IEnumerable<ProductListItem>
+@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+
+<h3>ShopList</h3>
+@if (Model.Count() == 0)
+{
+    <p>Veuillez nous excuser, il n'y a aucun produit à afficher en ce moment...</p>
+}
+else
+{
+    <div>
+        <ul>
+            @foreach (ProductListItem item in Model)
+            {
+                <li>
+                    <a asp-action="details" asp-controller="shop" asp-route-id="@item.Reference">
+                        <div>
+                            <img src="~/assets/ProductPics/@item.PicsUrl" />
+                            <h5>@item.ProductName</h5>
+                            <h6>@item.SellerName</h6>
+                            <strong>@item.Price € </strong>
+                            @*@Html.ActionLink("Voir plus...","details", "shop", new { id = item.Reference })*@
+                        </div>
+                    </a>
+                </li>
+            }
+        </ul>
+    </div>
+}
