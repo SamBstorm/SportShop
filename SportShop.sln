@@ -13,6 +13,10 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "BLL", "BLL", "{DBEFD0CB-CDE
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "DAL", "DAL", "{B9C03745-B26D-4513-843B-93274A7A70CC}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "DAL.EF", "DAL.EF", "{B069064F-4577-48F2-9C9C-D9DCD57126A7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SportShop.DAL-EF", "SportShop.DAL-EF\SportShop.DAL-EF.csproj", "{DAF06367-5F33-4263-8D9F-BC4AD0484198}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +31,10 @@ Global
 		{7E43D7B3-28D5-4CE2-8133-A61CB9911D29}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7E43D7B3-28D5-4CE2-8133-A61CB9911D29}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7E43D7B3-28D5-4CE2-8133-A61CB9911D29}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DAF06367-5F33-4263-8D9F-BC4AD0484198}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DAF06367-5F33-4263-8D9F-BC4AD0484198}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DAF06367-5F33-4263-8D9F-BC4AD0484198}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DAF06367-5F33-4263-8D9F-BC4AD0484198}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -34,6 +42,7 @@ Global
 	GlobalSection(NestedProjects) = preSolution
 		{454470D7-A633-4287-9826-A660E923D34D} = {A95D3D04-0CC3-400E-92F6-03F3E7403C1C}
 		{7E43D7B3-28D5-4CE2-8133-A61CB9911D29} = {B9C03745-B26D-4513-843B-93274A7A70CC}
+		{DAF06367-5F33-4263-8D9F-BC4AD0484198} = {B069064F-4577-48F2-9C9C-D9DCD57126A7}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {C984CB75-B3E7-424F-8728-B02C68870449}
