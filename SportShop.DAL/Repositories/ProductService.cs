@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace SportShop.DAL.Repositories
 {
-    public class ProductService : IRepository<Product, int>
+    public class ProductService : IProductRepository<Product>
     {
         public bool Delete(int id)
         {
@@ -27,6 +27,11 @@ namespace SportShop.DAL.Repositories
         public Product Get(int id)
         {
            return DataContext.Products.SingleOrDefault(p => p.Reference == id);
+        }
+
+        public IEnumerable<Product> GetBySeller(Guid sellerId)
+        {
+            return DataContext.Products.Where(p => p.SellerId == sellerId);
         }
 
         public int Insert(Product newRecord)
@@ -50,7 +55,7 @@ namespace SportShop.DAL.Repositories
                 oldValue.Model = newValue.Model;
                 oldValue.Volume = newValue.Volume;
                 oldValue.Weigth = newValue.Weigth;
-                oldValue.SellerName = newValue.SellerName;
+                oldValue.SellerId = newValue.SellerId;
                 oldValue.PicsUrl = newValue.PicsUrl;
             }
             catch (Exception)

@@ -26,7 +26,8 @@ namespace SportShop.MVC
         {
             services.AddControllersWithViews();
 
-            services.AddScoped<IRepository<Product, int>, ProductService>();
+            services.AddScoped<IProductRepository<Product>, ProductService>();
+            services.AddScoped<ISellerRepository<Seller>, SellerService>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

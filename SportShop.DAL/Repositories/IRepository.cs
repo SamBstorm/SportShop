@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace SportShop.DAL.Repositories
 {
-    public interface IRepository<TEntity, TId>
+    public interface IRepository<TEntity, TId> where TId : struct
     {
         public IEnumerable<TEntity> Get();
         public TEntity Get(TId id);

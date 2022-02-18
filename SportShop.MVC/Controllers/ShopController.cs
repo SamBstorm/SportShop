@@ -14,8 +14,8 @@ namespace SportShop.MVC.Controllers
 {
     public class ShopController : Controller
     {
-        private readonly IRepository<Product, int> _service;
-        public ShopController(IRepository<Product, int> service)
+        private readonly IProductRepository<Product> _service;
+        public ShopController(IProductRepository<Product> service)
         {
             _service = service;
         }
