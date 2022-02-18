@@ -1,10 +1,13 @@
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using SportShop.DAL.Entities;
-using SportShop.DAL.Repositories;
+using SportShop.Common.Repositories;
+using SportShop.DAL_EF.Entities;
+using SportShop.DAL_EF.Repositories;
+using SportShop.DAL_EF;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -25,6 +28,11 @@ namespace SportShop.MVC
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllersWithViews();
+
+            services.AddDbContext<SportShopContext>(
+                option => option.UseSqlServer(
+                    Configuration.GetConnectionString("default"))
+                );
 
             services.AddScoped<IProductRepository<Product>, ProductService>();
             services.AddScoped<ISellerRepository<Seller>, SellerService>();

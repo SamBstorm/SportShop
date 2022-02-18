@@ -44,5 +44,7 @@ namespace SportShop.DAL_EF.Entities
         [MaxLength(16)]
         [Required]
         public string Country { get; set; }
+
+        public ICollection<Product> Products { get; set; }
     }
 }

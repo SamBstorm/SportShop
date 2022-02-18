@@ -10,7 +10,7 @@ namespace SportShop.MVC.Models
         public string ProductName { get; set; }
         public string ProductDescription { get; set; }
         public string PicsUrl { get; set; }
-        public string SellerName { get; set; }
+        public Guid SellerId { get; set; }
         public decimal Price { get; set; }
         public int Weigth { get; set; }
         public int Volume { get; set; }

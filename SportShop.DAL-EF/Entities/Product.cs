@@ -55,5 +55,8 @@ namespace SportShop.DAL_EF.Entities
         [MaxLength(16)]
         [Required]
         public string Color { get; set; }
+
+        [ForeignKey(nameof(SellerId))]
+        public Seller Seller { get; set; }
     }
 }

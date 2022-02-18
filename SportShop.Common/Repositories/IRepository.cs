@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace SportShop.DAL.Repositories
+namespace SportShop.Common.Repositories
 {
     public interface IRepository<TEntity, TId> where TId : struct
     {

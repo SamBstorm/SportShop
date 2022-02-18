@@ -1,7 +1,7 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
-using SportShop.DAL.Entities;
-using SportShop.DAL.Repositories;
+using SportShop.Common.Repositories;
+using SportShop.DAL_EF.Entities;
 using SportShop.MVC.Handlers;
 using SportShop.MVC.Models;
 using System;
@@ -48,7 +48,7 @@ namespace SportShop.MVC.Controllers
         [HttpPost]
         public IActionResult Create(ProductCreateForm collection)
         {
-            _service.Insert(collection.ToProduct());
+            _service.Insert(collection.ToProductEF());
             return View(collection);
         }
 

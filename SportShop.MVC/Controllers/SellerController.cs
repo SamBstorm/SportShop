@@ -1,6 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using SportShop.DAL.Entities;
-using SportShop.DAL.Repositories;
+using SportShop.Common.Repositories;
+using SportShop.DAL_EF.Entities;
 using System;
 using System.Collections.Generic;
 using System.Linq;

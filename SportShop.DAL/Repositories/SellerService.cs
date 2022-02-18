@@ -1,4 +1,5 @@
-﻿using SportShop.DAL.Entities;
+﻿using SportShop.Common.Repositories;
+using SportShop.DAL.Entities;
 using System;
 using System.Collections.Generic;
 using System.Linq;
