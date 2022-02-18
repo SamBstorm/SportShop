@@ -3,9 +3,15 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.32126.315
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SportShop.MVC", "SportShop.MVC\SportShop.MVC.csproj", "{454470D7-A633-4287-9826-A660E923D34D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SportShop.MVC", "SportShop.MVC\SportShop.MVC.csproj", "{454470D7-A633-4287-9826-A660E923D34D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SportShop.DAL", "SportShop.DAL\SportShop.DAL.csproj", "{7E43D7B3-28D5-4CE2-8133-A61CB9911D29}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SportShop.DAL", "SportShop.DAL\SportShop.DAL.csproj", "{7E43D7B3-28D5-4CE2-8133-A61CB9911D29}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ASP", "ASP", "{A95D3D04-0CC3-400E-92F6-03F3E7403C1C}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "BLL", "BLL", "{DBEFD0CB-CDEE-49D0-83EB-CD20E6725689}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "DAL", "DAL", "{B9C03745-B26D-4513-843B-93274A7A70CC}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -24,6 +30,10 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{454470D7-A633-4287-9826-A660E923D34D} = {A95D3D04-0CC3-400E-92F6-03F3E7403C1C}
+		{7E43D7B3-28D5-4CE2-8133-A61CB9911D29} = {B9C03745-B26D-4513-843B-93274A7A70CC}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {C984CB75-B3E7-424F-8728-B02C68870449}
