@@ -30,7 +30,7 @@ namespace SportShop.MVC.Handlers
                 ProductName = entity.ProductName,
                 Price = entity.Price,
                 PicsUrl = entity.PicsUrl,
-                SellerName = entity.Seller?.Name ?? ""
+                SellerName = entity.Seller.Name
             };
         }
 
@@ -60,7 +60,7 @@ namespace SportShop.MVC.Handlers
                 ProductName = entity.ProductName,
                 Price = entity.Price,
                 PicsUrl = entity.PicsUrl,
-                SellerName = "",
+                SellerName = entity.Seller.Name,
                 Color = entity.Color,
                 Model = entity.Model,
                 Volume = entity.Volume,

@@ -19,8 +19,8 @@ namespace SportShop.MVC.Controllers
 
         public IActionResult Index()
         {
-            _sellerService.GetByCountry("BELGIUM");
-            return View();
+            IEnumerable<Seller> model = _sellerService.GetByCountry("BELGIUM");
+            return View(model);
         }
     }
 }
