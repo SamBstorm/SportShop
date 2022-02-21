@@ -1,7 +1,7 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using SportShop.Common.Repositories;
-using SportShop.DAL_EF.Entities;
+using SportShop.BLL.Entities;
 using SportShop.MVC.Handlers;
 using SportShop.MVC.Models;
 using System;
@@ -19,9 +19,11 @@ namespace SportShop.MVC.Controllers
         {
             _service = service;
         }
-        public IActionResult Index()
+        public IActionResult Index([FromQuery]string sellername)
         {
             IEnumerable<ProductListItem> model = _service.Get().Select(p => p.ToListItem());
+            if (!(sellername is null)) model = model.Where(p => p.SellerName.ToLower() == sellername.ToLower());
+            
             //Normalement, appel du BLL ou de la DAL : productService.Get().ToProductListIem();
             //List<ProductListItem> model = new List<ProductListItem>();
             //model.Add(new ProductListItem() { Reference = 1, PicsUrl = "velo.jpg", ProductName = "Vélo de compet'", SellerName = "Compet'Seller", Price = 1599.99M });
@@ -48,7 +50,7 @@ namespace SportShop.MVC.Controllers
         [HttpPost]
         public IActionResult Create(ProductCreateForm collection)
         {
-            _service.Insert(collection.ToProductEF());
+            _service.Insert(collection.ToProduct());
             return View(collection);
         }
 

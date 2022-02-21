@@ -5,8 +5,10 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using SportShop.Common.Repositories;
-using SportShop.DAL_EF.Entities;
-using SportShop.DAL_EF.Repositories;
+using D = SportShop.DAL_EF.Entities;
+using B = SportShop.BLL.Entities;
+using DS = SportShop.DAL_EF.Repositories;
+using BS = SportShop.BLL.Repositories;
 using SportShop.DAL_EF;
 using System;
 using System.Collections.Generic;
@@ -34,8 +36,10 @@ namespace SportShop.MVC
                     Configuration.GetConnectionString("default"))
                 );
 
-            services.AddScoped<IProductRepository<Product>, ProductService>();
-            services.AddScoped<ISellerRepository<Seller>, SellerService>();
+            services.AddScoped<IProductRepository<D.Product>, DS.ProductService>();
+            services.AddScoped<IProductRepository<B.Product>, BS.ProductService>();
+            services.AddScoped<ISellerRepository<D.Seller>, DS.SellerService>();
+            services.AddScoped<ISellerRepository<B.Seller>, BS.SellerService>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

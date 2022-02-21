@@ -13,6 +13,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\SportShop.BLL\SportShop.BLL.csproj" />
     <ProjectReference Include="..\SportShop.Common\SportShop.Common.csproj" />
     <ProjectReference Include="..\SportShop.DAL-EF\SportShop.DAL-EF.csproj" />
     <ProjectReference Include="..\SportShop.DAL\SportShop.DAL.csproj" />

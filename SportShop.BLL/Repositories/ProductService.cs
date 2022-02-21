@@ -27,8 +27,8 @@ namespace SportShop.BLL.Repositories
 
         public IEnumerable<Product> Get()
         {
-            IEnumerable<DAL_EF.Entities.Product> products = _productRepository.Get();
-            products.Select(p =>
+            IEnumerable<DAL_EF.Entities.Product> products = _productRepository.Get().ToList();
+            products = products.Select(p =>
             {
                 p.Seller = _sellerRepository.Get(p.SellerId);
                 return p;               //return p car le SELECT demande un résultat final,
@@ -41,7 +41,9 @@ namespace SportShop.BLL.Repositories
 
         public Product Get(int id)
         {
-            return _productRepository.Get(id).ToBLL();
+            DAL_EF.Entities.Product result = _productRepository.Get(id);
+            result.Seller = _sellerRepository.Get(result.SellerId);
+            return result.ToBLL();
         }
 
         public IEnumerable<Product> GetBySeller(Guid sellerId)

@@ -12,6 +12,10 @@ namespace SportShop.BLL.Entities
         public string Name { get; set; }
         public Address Address { get; set; }
         public IEnumerable<Product> Products { get; set; }
+        public Seller()
+        {
+
+        }
         public Seller(Guid id, string name, Address address, params Product[] products)
         {
             this.SellerId = id;
