@@ -1,0 +1,12 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\SportShop.Common\SportShop.Common.csproj" />
+    <ProjectReference Include="..\SportShop.DAL-EF\SportShop.DAL-EF.csproj" />
+  </ItemGroup>
+
+</Project>

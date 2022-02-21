@@ -1,4 +1,5 @@
-﻿using Microsoft.EntityFrameworkCore.ChangeTracking;
+﻿using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.ChangeTracking;
 using SportShop.Common.Repositories;
 using SportShop.DAL_EF.Entities;
 using System;
@@ -46,7 +47,7 @@ namespace SportShop.DAL_EF.Repositories
 
         public IEnumerable<Product> GetBySeller(Guid sellerId)
         {
-            return _context.Products.Where(p => p.SellerId == sellerId);
+            return _context.Products.Include(p=> p.Seller).Where(p => p.SellerId == sellerId);
         }
 
         public int Insert(Product newRecord)
